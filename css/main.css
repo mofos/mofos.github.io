@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body{
+    overflow-x: hidden;
+font-family: 'Roboto Mono', monospace;
+margin: 0;
+height: 100vh;
+display: block;
+background-color: black;
+padding: 1em;
+
+}
+
+header{
+    text-align: center;
+    border-radius: 50em
+    ;
+}
+header img{
+    padding: 5em;
+    width: 100%;
+border-radius: 50%;
+text-align: center;
+
+}
+
+.hero{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+.hero h2{
+    padding: 1em;
+    background-color: rgb(109, 121, 131);
+   margin: .8em;
+   border-radius: 3em;
+   border-color: rgba(2, 2, 2, 0.548);
+   box-shadow: aliceblue;
+}
+
+.hero p{
+    padding-bottom: 2em;
+}
+
+.tw{
+    display: block;
+    box-sizing: border-box;
+    background-color: rgb(159, 204, 255);
+}
+.twitter{
+    text-align: center;
+    padding-top: 2em;
+   
+
+}
+
+.loop{
+    text-align: center;
+    width: 100%;
+}
+
+.poki{
+    display: block;
+
+}
+
+@media(min-width : 650px)
+{
+
+header img{
+    width: 50%;
+
+}
+
+.tw{
+    display: grid ;
+    grid-template-columns:repeat(2,50%) ;
+    grid-area: "a b";
+
+}
+.twitter
+{
+    grid-area: "a";
+    text-align: left;
+    align-self: center;
+    padding-left: 20%;
+    padding-right: 2em;
+}
+.twitter h1{
+    color: tomato;
+    text-align: center;
+   
+
+}
+.loop
+{
+    grid-area:"b";
+    text-align: right;
+    align-self: center;
+    padding-right: 40%;
+    
+}
+
+.hero{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+}
