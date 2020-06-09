@@ -109,3 +109,21 @@ header img{
 }
 
 }
+
+.gif{
+
+    width: 100%;
+    height: 100vh;
+    display: block;
+    text-align: center;
+    align-self: center;
+
+}
+
+.gif h1{
+    color: aliceblue;
+}
+
+.gif h2{
+    color: azure;
+}
