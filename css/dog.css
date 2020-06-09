@@ -65,11 +65,12 @@
   }
   
   .dog {
+z-index: 1;
     position: absolute;
     width: 100%;
     height: auto;
     z-index: 1;
-    margin-top: 2em;
+    margin-top: 10em;
     margin-left: 10em;
 
 
