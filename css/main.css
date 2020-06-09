@@ -30,6 +30,10 @@ text-align: center;
     text-align: center;
 }
 
+.hero h1{
+font-size: 600%;
+
+}
 
 .hero h2{
     padding: 1em;
