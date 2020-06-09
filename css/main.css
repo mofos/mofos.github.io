@@ -74,7 +74,86 @@ text-align: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
+
+
+}
+
+.para h1{
+    font-size: 700%;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: crimson;
     z-index: 1;
+    text-align: center;
+    align-self: center;
+    margin: auto;
+}
+
+.wrapper h1{
+    color: black;
+    z-index: 1;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+    font-size: 4em;
+    margin-bottom: 8em;
+    
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    min-height: 100vh;
+    background-color: #E1E6EC;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  
+  .img {
+    
+    width: 100%;
+    position: absolute;
+  }
+  .img.-base {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.07), 0 6.7px 5.3px rgba(0, 0, 0, 0.05), 0 12.5px 10px rgba(0, 0, 0, 0.042), 0 22.3px 17.9px rgba(0, 0, 0, 0.035), 0 41.8px 33.4px rgba(0, 0, 0, 0.028), 0 100px 80px rgba(0, 0, 0, 0.02);
+  }
+  .img.-clip {
+    -webkit-clip-path: url(#clip-path);
+            clip-path: url(#clip-path);
+    pointer-events: none;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    opacity: 0;
+  }
+
+  
+
+  
+.gif img{
+    padding: 4em;
+    position: relative;
+
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+    align-self: center;
+    
+
+}
+
+.gif h1{
+    color: aliceblue;
+}
+
+.gif h2{
+    color: azure;
+    margin-bottom: 3em;
 }
 
 @media(min-width : 650px)
@@ -120,24 +199,31 @@ header img{
     margin-right: 10%;
 }
 
-}
+.gif img{
+    padding: 4em;
+    
 
-.gif{
-
-    width: 100%;
+    width: 30%;
     height: auto;
     display: block;
     text-align: center;
     align-self: center;
     
+ 
 
 }
 
 .gif h1{
     color: aliceblue;
+    font-size: larger;
 }
 
 .gif h2{
     color: azure;
     margin-bottom: 3em;
+
 }
+
+
+}
+
