@@ -45,6 +45,7 @@ text-align: center;
 }
 
 .tw{
+
     display: block;
     box-sizing: border-box;
     background-color: rgb(159, 204, 255);
@@ -66,9 +67,20 @@ text-align: center;
 
 }
 
+.para{
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/018/918/824/large/z-w-gu-blade-a3c0.jpg?1561249831);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
 @media(min-width : 650px)
 {
 
+    
 header img{
     width: 50%;
 
@@ -113,10 +125,11 @@ header img{
 .gif{
 
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: block;
     text-align: center;
     align-self: center;
+    
 
 }
 
@@ -126,4 +139,5 @@ header img{
 
 .gif h2{
     color: azure;
+    margin-bottom: 3em;
 }
