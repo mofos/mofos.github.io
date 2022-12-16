@@ -21,40 +21,45 @@
       </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cum consequatur voluptas nam soluta rem laudantium, incidunt, non natus sapiente distinctio voluptatum quae aliquid veritatis iusto sunt perferendis sit architecto.</p>
         
-      
-          <form id="form">
-            <label for="text">Enter text:</label><br>
-            <input type="text" id="text" name="text"><br>
-            <button type="submit">Submit</button>
-          </form>
-          <img id="output" alt="Output image">
-          <script>
-            const form = document.getElementById("form");
-            form.addEventListener("submit", e => {
-              e.preventDefault();
+        <form id="form">
+          <label for="text">Enter text:</label><br>
+          <input type="text" id="text" name="text"><br>
+          <button type="submit">Submit</button>
+        </form>
+        <img id="output" alt="Output image">
         
-              const text = document.getElementById("text").value;
-              
-              fetch("https://zac-linaqruf-anything-v3-0.hf.space/run/predict", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    data: [
-      "hello world",
-	]
-  })})
-.then(r => r.json())
-.then(
-  r => {
-    let data = r.data;
-  }
-)
-              .then(response => response.json())
+        <script>
+          const form = document.getElementById("form");
+          form.addEventListener("submit", e => {
+            e.preventDefault();
+        
+            const text = document.getElementById("text").value;
+            
+            // Send a POST request to the server
+            fetch("https://zac-linaqruf-anything-v3-0.hf.space/run/predict", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ data: [text] })
+            })
+              .then(response => {
+                // Check if the response is successful
+                if (response.ok) {
+                  return response.json();
+                }
+                // If the response is not successful, throw an error
+                throw new Error(response.statusText);
+              })
               .then(data => {
+                // Set the src attribute of the output image to the base64-encoded image
                 document.getElementById("output").src = `data:image/png;base64,${data.data[0]}`;
+              })
+              .catch(error => {
+                // Log the error to the console
+                console.error(error);
               });
-            });
-          </script>
+          });
+        </script>
+        
         
         <div class="content"> 
           <div class="notebook-page"> 
